@@ -1,0 +1,3 @@
+The following libraries must be installed for this to work properly:
+pycryptodome
+Pillow
