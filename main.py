@@ -50,7 +50,7 @@ while True:
                           "1) AES-256\n"
                           "2) LSB Steganography\n"
                           "0) Exit\n")
-        while not selection.isnumeric() or int(selection) > 1 or int(selection) < 0:
+        while not selection.isnumeric() or int(selection) > 2 or int(selection) < 0:
             selection = input("Input must be a number between 0-2. Try again.\n")
 
         if int(selection) == 0:
@@ -65,5 +65,5 @@ while True:
                 AESCipher.decrypt256("text")
             elif int(selection) == 2:
                 AESCipher.decrypt256("file")
-            elif int(selection) == 3:
-                LSBSteganography.decrypt()
+        elif int(selection) == 2:
+            LSBSteganography.decrypt()
