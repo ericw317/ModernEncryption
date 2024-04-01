@@ -118,6 +118,15 @@ class LSBSteganography:
                 bin_holder = int(bin_holder, 2)  # convert to decimal
                 message_plaintext += chr(bin_holder)  # convert to letter
                 bin_holder = ""
+        counter = 0
+        for x in range(width):
+            if counter == 10:
+                break
+            for y in range(height):
+                print(pixels[x, y])
+                counter += 1
+                if counter == 10:
+                    break
 
         # encode the underscores back into spaces and output the plaintext message
         message_plaintext = message_plaintext.replace("_", " ")
